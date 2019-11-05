@@ -1,8 +1,8 @@
 body {
-  background-color: rgb(233, 233, 233);
+  background-color: rgb(241, 241, 241);
 }
 h1 { 
-  font-family: 'Raleway', sans-serif; 
+  font-family: 'Raleway', sans-serif !important; 
   font-size: 24px; 
   font-style: normal; 
   font-variant: normal; 
@@ -10,7 +10,7 @@ h1 {
   line-height: 26.4px; 
 } 
 h3 { 
-  font-family: 'Raleway', sans-serif; 
+  font-family: 'Raleway', sans-serif !important; 
   font-size: 14px; 
   font-style: normal; 
   font-variant: normal; 
@@ -18,7 +18,7 @@ h3 {
   line-height: 15.4px; 
 } 
 p { 
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif !important;
   font-size: 14px; 
   font-style: normal; 
   font-variant: normal; 
@@ -26,7 +26,7 @@ p {
   line-height: 20px; 
 } 
 li {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif !important;
   font-size: 14px; 
   font-style: normal; 
   font-variant: normal; 
@@ -34,7 +34,7 @@ li {
   line-height: 20px; 
 }
 blockquote { 
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif !important;
   font-size: 21px; 
   font-style: normal; 
   font-variant: normal; 
@@ -42,7 +42,7 @@ blockquote {
   line-height: 30px; 
 } 
   pre { 
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif !important;
   font-size: 13px; 
   font-style: normal; 
   font-variant: normal; 
