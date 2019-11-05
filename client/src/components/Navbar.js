@@ -27,6 +27,15 @@ export default function Navbar() {
                     </ul>
                 </div>
             </nav>
+            <div className="socialContainer">
+                <i className="fa fa-facebook-f"></i>
+                <i className="fa fa-twitter"></i>
+                <i className="fa fa-instagram"></i>
+                <i className="fa fa-youtube"></i>
+                <i className="fa fa-soundcloud"></i>
+                <i className="fa fa-spotify"></i>
+                <i className="fa fa-itunes"></i>
+            </div>
         </React.Fragment>
     );
 }

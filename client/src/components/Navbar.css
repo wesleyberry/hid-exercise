@@ -28,11 +28,50 @@
     .active {
         color: rgb(32, 32, 32) !important;
     }
+    .socialContainer {
+        text-align: center;
+        margin: 75px 0 0 0;
+    }
+    .fa {
+        font-size: 24px;
+        margin: 0 15px 0 15px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
+    .fa-facebook-f:hover {
+        color: #3b5998;
+        transition: 0.4s;
+    }
+    .fa-twitter:hover {
+        color: #00acee;
+        transition: 0.4s;
+    }
+    .fa-instagram:hover {
+        color: #3f729b;
+        transition: 0.4s;
+    }
+    .fa-youtube:hover {
+        color: #c4302b;
+        transition: 0.4s;
+    }
+    .fa-soundcloud:hover {
+        color: #ff7700;
+        transition: 0.4s;
+    }
+    .fa-spotify:hover {
+        color: #1DB954;
+        transition: 0.4s;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) { 
-
+    .fa {
+        font-size: 24px;
+        margin: 0 25px 0 25px;
+        transition: 0.4s;
+        cursor: pointer;
+    }
 }
 
 /* Medium devices (tablets, 768px and up) */
