@@ -1,0 +1,25 @@
+@media (min-width: 300px) { 
+    .subHeaders {
+        text-align: center;
+        margin-top: 75px;
+    }
+    .ticketButton {
+        background-color: rgb(202, 202, 202);
+        transition: 0.4s;
+    }
+    .ticketButton:hover {
+        background-color: rgb(221, 221, 221);
+        transition: 0.4s;
+    }
+    thead {
+        background-color: rgb(221, 221, 221);
+    }
+    .table td {
+        padding: .5rem;
+    }
+}
+@media (min-width: 300px) { 
+    .table td {
+        padding: .75rem;
+    }
+}
