@@ -1,25 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Video from './components/Video/Video';
 import Table from './components/Table/Table';
+import Nuts from './components/Nuts/Nuts';
 
 class App extends Component {
   state = {
     videos: [
       {
         id: 1,
-        src: 'https://www.youtube.com/embed/45cYwDMibGo'
+        src: 'https://www.youtube.com/embed/u1iiGNgznu0',
+        title: 'song1'
       },
       {
         id: 2,
-        src: 'https://www.youtube.com/embed/QDYfEBY9NM4'
+        src: 'https://www.youtube.com/embed/XOZedVhHP-o',
+        title: 'song2'
       },
       {
         id: 3,
-        src: 'https://www.youtube.com/embed/2Q_ZzBGPdqE'
+        src: 'https://www.youtube.com/embed/7iqf5ytps5c',
+        title: 'song2'
       },
     ],
     upcomingTours: [
@@ -51,6 +54,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" render={ props => (
             <React.Fragment>
+              <Nuts />
               { this.state.videos.map( video => (
                 <Video 
                   key={ video.id }

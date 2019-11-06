@@ -1,0 +1,50 @@
+@media (min-width: 300px) {
+    .backgroundNuts {
+        position: absolute;
+        height: 200px;
+        width: auto;
+        z-index: -1;
+    }
+    #nut_1 {
+        left: 15px;
+        top: 350px;
+    }
+    #nut_2 {
+        right: 15px;
+        top: 700px;
+    }
+    #nut_3 {
+        left: 15px;
+        top: 1050px;
+    }
+    #nut_4 {
+        right: 15px;
+        top: 1400px;
+    }
+    #nut_5 {
+        display: none;
+        left: 15px;
+    }
+}
+@media (min-width: 992px) {
+    .backgroundNuts {
+        height: 300px;
+    }
+    #nut_1 {
+        top: 400px;
+    }
+    #nut_2 {
+        top: 800px;
+    }
+    #nut_3 {
+        top: 1200px;
+    }
+    #nut_4 {
+        top: 1600px;
+    }
+    #nut_5 {
+        display: block;
+        top: 2000px;
+    }
+}
+

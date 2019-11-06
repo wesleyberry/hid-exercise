@@ -4,15 +4,17 @@
         margin-top: 75px;
     }
     .ticketButton {
-        background-color: rgb(202, 202, 202);
+        background-color: rgb(134, 72, 31);
+        color: rgb(238, 238, 238);
         transition: 0.4s;
     }
     .ticketButton:hover {
-        background-color: rgb(221, 221, 221);
+        background-color: rgb(168, 83, 26);
+        color: rgb(238, 238, 238);
         transition: 0.4s;
     }
     thead {
-        background-color: rgb(221, 221, 221);
+        background-color: rgb(137, 223, 134);
     }
     .table td {
         padding: .5rem;

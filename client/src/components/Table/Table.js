@@ -19,7 +19,7 @@ export class Table extends Component {
                         </thead>
                         <tbody>
                             { upcomingTours.map(upcomingTour => (
-                                <tr>
+                                <tr key={ upcomingTour.id }>
                                     <td>{ upcomingTour.name }</td>
                                     <td>{ upcomingTour.date }</td>
                                     <td>{ upcomingTour.location }</td>

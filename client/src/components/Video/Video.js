@@ -7,15 +7,16 @@ export class Video extends Component {
             <div className="container">
                 <div className="videoWrapper">
                     <iframe 
+                        title={ this.props.title }
                         id={ this.props.id } 
                         src={ this.props.src }
-                        frameborder='0'
+                        frameBorder='0'
                         allow='accelerometer'
-                        autoplay 
-                        encrypted-media 
-                        gyroscope 
-                        picture-in-picture 
-                        allowfullscreen>
+                        autoPlay 
+                        encryptedmedia="true" 
+                        gyroscope="true"
+                        picture-in-picture="true" 
+                        allowFullScreen={ true }>
                     </iframe>
                 </div>
             </div>
