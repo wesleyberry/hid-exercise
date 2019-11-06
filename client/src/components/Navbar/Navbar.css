@@ -9,6 +9,14 @@
         line-height: 65px;
         color: rgb(48, 48, 48);
     }
+    #headerImage {
+        width: 80%;
+        height: auto;
+        margin-top: 75px;
+    }
+    .headerContainer {
+        text-align: center;
+    }
     #root > nav > button {
         margin-left: 50%;
         transform: translate(-50%, 0);
@@ -94,10 +102,14 @@
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-
+    #headerImage {
+        width: 65%;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) { 
-
+    #headerImage {
+        width: 50%;
+    }
 }
