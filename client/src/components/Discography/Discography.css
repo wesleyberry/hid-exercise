@@ -1,0 +1,33 @@
+@media (min-width: 300px) {
+    .trackImage {
+        width: 280px;
+        height: auto;
+    }
+    .imageContainer {
+        text-align: center;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .trackRow {
+        padding: 50px 25px 50px 25px;
+    }
+    .singleRow {
+        border-top: solid 1px black;
+    }
+}
+@media (min-width: 568px) {
+    .trackImage {
+        width: 350px;
+        height: auto;
+    }
+}
+@media (min-width: 768px) {
+    .trackRow {
+        padding: 0px 25px 50px 50px;
+    }
+}
+@media (min-width: 992px) {
+    .trackRow {
+        padding: 15px 25px 50px 75px;
+    }
+}

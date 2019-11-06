@@ -1,7 +1,7 @@
 @media (min-width: 300px) { 
-    .subHeaders {
+    .subHeaders {  
+        color: #2e1504;
         text-align: center;
-        margin-top: 75px;
     }
     .ticketButton {
         background-color: rgb(134, 72, 31);
@@ -17,14 +17,34 @@
         background-color: rgb(137, 223, 134);
     }
     .table td {
-        padding: .5rem;
+        padding: 0.5rem;
+        word-break: break-word;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    .table th {
+        padding: 0.5rem;
+        word-break: break-word;
+        font-size: 18px;
+        vertical-align: middle;
     }
     .btn {
         border-radius: .1rem;
+        word-break: normal;
     }
 }
-@media (min-width: 300px) { 
+@media (min-width: 576px) { 
     .table td {
-        padding: .75rem;
+        padding: 0.75rem;
+        font-size: 18px;
+    }
+    .table th {
+        padding: 0.75rem;
+        font-size: 24px;
+    }
+}
+@media (min-width: 992px) { 
+    #root > div:nth-child(12) {
+        margin: 50px auto 50px auto;
     }
 }

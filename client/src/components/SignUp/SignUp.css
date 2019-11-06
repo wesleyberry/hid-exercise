@@ -1,0 +1,32 @@
+.signUpContainer {
+    justify-content: center;
+    text-align: center;
+}
+.signUpWrapper {
+    background-color: #2e1504;
+    padding: 50px 0 50px 0;
+}
+.subHeaderSignUp {
+    color: rgb(137, 223, 134)
+}
+.ticketButton {
+    background-color: rgb(134, 72, 31);
+    color: #eeeeee;
+    transition: 0.4s;
+    margin-top: 25px;
+}
+#emailInput {
+    margin-top: 50px;
+}
+@media (min-width: 300px) { 
+    #emailInput {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+@media (min-width: 576px) { 
+    #emailInput {
+        width: 60%;
+        margin-left: 20%;
+    }
+}

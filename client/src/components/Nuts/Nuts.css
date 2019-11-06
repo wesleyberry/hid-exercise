@@ -19,7 +19,7 @@
     }
     #nut_4 {
         right: 15px;
-        top: 1400px;
+        display: none;
     }
     #nut_5 {
         display: none;
@@ -40,11 +40,31 @@
         top: 1200px;
     }
     #nut_4 {
+        display: block;
         top: 1600px;
     }
     #nut_5 {
         display: block;
         top: 2000px;
+    }
+}
+@media (min-width: 1200px) {
+    #nut_1 {
+        top: 450px;
+    }
+    #nut_2 {
+        top: 900px;
+    }
+    #nut_3 {
+        top: 1350px;
+    }
+    #nut_4 {
+        display: block;
+        top: 1800px;
+    }
+    #nut_5 {
+        display: block;
+        top: 2250px;
     }
 }
 
