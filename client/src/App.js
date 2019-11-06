@@ -5,8 +5,11 @@ import Navbar from './components/Navbar/Navbar';
 import Video from './components/Video/Video';
 import Table from './components/Table/Table';
 import Nuts from './components/Nuts/Nuts';
+import NutsTour from './components/NutsTour/NutsTour';
 import SignUp from './components/SignUp/SignUp';
 import Discography from './components/Discography/Discography';
+import TourArchive from './components/TourArchive/TourArchive';
+import Spotify from './components/Spotify/Spotify';
 
 class App extends Component {
   state = {
@@ -78,6 +81,80 @@ class App extends Component {
         title: 'Your Love is Like a Nut',
         time: '4:00'
       }
+    ],
+    TourOne: [
+      {
+        id: 13,
+        location: 'Houston',
+        date: 'June 10, 2018'
+      },
+      {
+        id: 14,
+        location: 'Dallas',
+        date: 'June 13, 2018'
+      },
+      {
+        id: 15,
+        location: 'Austin',
+        date: 'June 14, 2018'
+      },
+      {
+        id: 16,
+        location: 'San Antonio',
+        date: 'June 17, 2018'
+      },
+      {
+        id: 17,
+        location: 'El Paso',
+        date: 'June 23, 2018'
+      },
+      {
+        id: 18,
+        location: 'Fort Worth',
+        date: 'June 28, 2018'
+      },
+      {
+        id: 19,
+        location: 'Arlington',
+        date: 'June 30, 2018'
+      }
+    ],
+    TourTwo: [
+      {
+        id: 20,
+        location: 'Austin',
+        date: 'June 1, 2019'
+      },
+      {
+        id: 21,
+        location: 'Odessa',
+        date: 'June 5, 2019'
+      },
+      {
+        id: 22,
+        location: 'Waco',
+        date: 'June 6, 2019'
+      },
+      {
+        id: 23,
+        location: 'Lubbock',
+        date: 'June 10, 2019'
+      },
+      {
+        id: 24,
+        location: 'Corpus Chrisi',
+        date: 'June 12, 2019'
+      },
+      {
+        id: 25,
+        location: 'Galveston',
+        date: 'June 15, 2019'
+      },
+      {
+        id: 26,
+        location: 'Houston',
+        date: 'June 19, 2019'
+      }
     ]
   }
 
@@ -102,11 +179,21 @@ class App extends Component {
           <Route exact path="/music" render={ props=> (
             <React.Fragment>
               <h2 className='pageHeaders'>Discography</h2>
-              <Discography tracks={ this.state.OakTreeSpecial}/>
+              <Discography tracks={ this.state.OakTreeSpecial } />
+              <Spotify />
             </React.Fragment>
           )}/>
           <Route exact path="/shop" />
-          <Route exact path="/tour" />
+          <Route exact path="/tour" render={ props=> (
+            <React.Fragment>
+              <NutsTour />
+              <h2 className='pageHeaders'>Tour Archive</h2>
+              <h3 className='subHeaderTour'>Nut Fin Jubilee</h3>
+              <TourArchive tours={ this.state.TourOne } />
+              <h3 className='subHeaderTour'>High Plains Digger</h3>
+              <TourArchive tours={ this.state.TourTwo } />
+            </React.Fragment>
+          )}/>
         </Switch>
       </Router>
     );

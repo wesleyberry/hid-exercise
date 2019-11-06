@@ -1,0 +1,12 @@
+@media (min-width: 300px) {
+    .artistImage {
+        height: 250px;
+        width: auto;
+        margin: auto;
+    }
+    .artistContainer {
+        justify-content: center;
+        text-align: center;
+        margin: 25px 0 25px 0;
+    }
+}
