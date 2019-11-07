@@ -72,3 +72,14 @@ pre {
   font-size: 24px;
   color: #2e1504;
 }
+.inlineButton {
+  background-color: rgb(134, 72, 31);
+  color: #eeeeee;
+  transition: 0.4s;
+  margin-left: 25px;
+}
+.inlineButton:hover {
+  background-color: rgb(168, 83, 26);
+  color: rgb(238, 238, 238);
+  transition: 0.4s;
+}

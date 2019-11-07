@@ -13,14 +13,19 @@
         white-space: nowrap;
         width: 500px;
       }
+      .btn:hover {
+        background-color: rgb(168, 83, 26) !important;
+        color: rgb(238, 238, 238) !important;
+        transition: 0.4s;
+      }
     </style>
   </head>
 
-  <body>
+  <body style="background-color: rgb(220, 240, 209)">
     <div class="container">
-      <div id="login">
-        <h1>This is an example of the Authorization Code flow</h1>
-        <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+      <div id="login" style="text-align: center;">
+        <h1 style="text-align: center; margin: 50px;">Click Below to Log Into Spotify</h1>
+        <a href="/login" class="btn" style="background-color: rgb(134, 72, 31); color: #eeeeee; transition: 0.4s;">Log in with Spotify</a>
       </div>
       <div id="loggedin">
         <div id="user-profile">

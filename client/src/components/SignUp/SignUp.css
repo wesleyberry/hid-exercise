@@ -7,13 +7,24 @@
     padding: 50px 0 50px 0;
 }
 .subHeaderSignUp {
-    color: rgb(137, 223, 134)
+    color: rgb(43, 165, 38);
 }
 .ticketButton {
     background-color: rgb(134, 72, 31);
     color: #eeeeee;
     transition: 0.4s;
     margin-top: 25px;
+}
+.signUpButton {
+    background-color: rgb(43, 165, 38);
+    color: rgb(241, 241, 241);
+    transition: 0.4s;
+    margin-top: 25px;
+}
+.signUpButton:hover {
+    background-color: rgb(36, 124, 33);
+    color: rgb(238, 238, 238);
+    transition: 0.4s;
 }
 #emailInput {
     margin-top: 50px;

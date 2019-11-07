@@ -11,6 +11,11 @@ import Discography from './components/Discography/Discography';
 import TourArchive from './components/TourArchive/TourArchive';
 import Spotify from './components/Spotify/Spotify';
 import SpotifyAPI from 'spotify-web-api-js';
+import TShirt from './Images/sq_shirt_1.png';
+import Cap from './Images/sw_hat_1.png';
+import Hoodie from './Images/sw_hoodie_2_cropped.png';
+import Album from './Images/oak_tree_special.png';
+import Merch from './components/Merch/Merch';
 
 const spotifyWebApi = new SpotifyAPI();
 
@@ -160,7 +165,35 @@ class App extends Component {
       }
     ],
     loggedIn: true,
-    nowPlaying: {}
+    nowPlaying: {},
+    merchItems: [
+      {
+        id:27,
+        title: 'T-Shirt',
+        price: '$19.99',
+        image: TShirt
+      },
+      {
+        id:28,
+        title: 'Ball Cap',
+        price: '$9.99',
+        image: Cap
+      },
+      {
+        id:29,
+        title: 'Hoodie',
+        price: '$29.99',
+        image: Hoodie
+      },
+      {
+        id: 30,
+        title: 'Album',
+        price: '$19.99',
+        image: Album
+      },
+    ],
+    searchedTracks: [],
+    APIImage: ''
   }
   constructor() {
     super();
@@ -199,6 +232,24 @@ class App extends Component {
       })
   }
 
+  searchAPI() {
+    spotifyWebApi.searchTracks('artist:Punch Brothers').then(
+      data => {
+        let searchedTracks = [];
+        for( let i = 0; i < 5; i++) {
+          searchedTracks.push(data.tracks.items[i].name);
+        }
+        let APIImage = data.tracks.items[0].album.images[0].url;
+        console.log(APIImage);
+        this.setState({
+          searchedTracks,
+          APIImage
+        });
+      },
+      err => console.log('Something went wrong!', err)
+    );
+  }
+
   render() {
     return (
       <Router>
@@ -222,19 +273,54 @@ class App extends Component {
               <h2 className='pageHeaders'>Discography</h2>
               <Discography tracks={ this.state.OakTreeSpecial } />
               <Spotify />
-              <a href="http://localhost:8080">
-                <button>Login with Spotify</button>
-              </a>
-              <div>Now Playing: { this.state.nowPlaying.name }</div>
-              <div>
-                <img src={ this.state.nowPlaying.image } style={{ width: 100 }}/>
+              <div className="container">
+                <h2 style={{ textAlign: 'center'}}>Comin' to Spotify Soon! In the mean time, Check Out Our Recommendation...</h2>
+                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
+                  <p>First, login with Spotify:</p>
+                  <a href="http://localhost:8080">
+                    <button className="btn inlineButton">Login with Spotify</button>
+                  </a>
+                </div>
+                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
+                  <p>Third, check your spotify:</p>
+                  {/* <button onClick={() => this.getNowPlaying()} className="btn inlineButton">
+                    Check Now Playing
+                  </button> */}
+                  <button onClick={() => this.searchAPI()} className="btn inlineButton">
+                    Search API
+                  </button>
+                </div>
+                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
+                  <p>Our Recommendation:  <strong>Punch Brothers</strong></p>
+                </div>
+                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
+                  <img src={ this.state.APIImage } style={{ width: '280px' }}/>
+                </div>
+                <div className="row">
+                  <ul>
+                    { this.state.searchedTracks.map(track => (
+                      <li style={{ fontSize:'20px', marginBottom:'20px' }}>{ track }</li>
+                    )) }
+                  </ul>
+                </div>
               </div>
-              <button onClick={() => this.getNowPlaying()}>
-                Check Now Playing
-              </button>
             </React.Fragment>
           )}/>
-          <Route exact path="/shop" />
+          <Route exact path="/shop" render={ props=> (
+            <div className="container">
+              <h2 className="pageHeaders">Merchandise</h2>
+              <div className="row">
+                { this.state.merchItems.map(merch => (
+                  <Merch 
+                    title={ merch.title }
+                    price={ merch.price }
+                    id={ merch.id }
+                    image={ merch.image }
+                  />
+                ))}
+              </div>
+            </div>
+          )}/>
           <Route exact path="/tour" render={ props=> (
             <React.Fragment>
               <NutsTour />

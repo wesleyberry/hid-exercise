@@ -17,7 +17,7 @@ function SignUp() {
                 <form>
                     <div className="form-group">
                         <input type="email" className="form-control" id="emailInput" placeholder="Email Address" />
-                        <button type="submit" className="btn ticketButton">Submit</button>
+                        <button type="submit" className="btn signUpButton">Submit</button>
                     </div>
                 </form>
             </div>
