@@ -7,25 +7,9 @@ function Spotify() {
     const [token, setToken] = useState([]);
 
     useEffect(() => {
-        // fetchArtist();
+
     }, []);
 
-    // async function fetchArtist() {
-    //     let accessToken = await fetch('/api/token');
-
-    //     let url = 'https://api.spotify.com/v1/search?q=bluegrass&type=artist&limit=6';
-    //     console.log(accessToken);
-    //     fetch(url, {
-    //         headers: {
-    //             'Content-Type': 'application/json',
-    //             'Authorization': `Bearer ${accessToken}`
-    //         }
-    //     })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setArtists(data.artists.items)
-    //     }).catch(err => console.log(err));
-    // }
 
     return (
         <div className="container">

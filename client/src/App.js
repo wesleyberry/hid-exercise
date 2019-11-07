@@ -10,6 +10,9 @@ import SignUp from './components/SignUp/SignUp';
 import Discography from './components/Discography/Discography';
 import TourArchive from './components/TourArchive/TourArchive';
 import Spotify from './components/Spotify/Spotify';
+import SpotifyAPI from 'spotify-web-api-js';
+
+const spotifyWebApi = new SpotifyAPI();
 
 class App extends Component {
   state = {
@@ -155,7 +158,45 @@ class App extends Component {
         location: 'Houston',
         date: 'June 19, 2019'
       }
-    ]
+    ],
+    loggedIn: true,
+    nowPlaying: {}
+  }
+  constructor() {
+    super();
+    const params = this.getHashParams();
+    this.setState({
+      loggedIn: params.access_token ? true : false,
+      nowPlaying: {
+        name: 'Not Checked',
+        image: ''
+      }
+    });
+    if(params.access_token) {
+      spotifyWebApi.setAccessToken(params.access_token);
+    }
+  }
+
+  getHashParams() {
+    var hashParams = {};
+    var e, r = /([^&;=]+)=?([^&;]*)/g,
+        q = window.location.hash.substring(1);
+    while ( e = r.exec(q)) {
+       hashParams[e[1]] = decodeURIComponent(e[2]);
+    }
+    return hashParams;
+  }
+
+  getNowPlaying() {
+    spotifyWebApi.getMyCurrentPlaybackState()
+      .then(response => {
+        this.setState({
+          nowPlaying: {
+            name: response.item.name,
+            image: response.item.album.images[0].url
+          }
+        })
+      })
   }
 
   render() {
@@ -181,6 +222,16 @@ class App extends Component {
               <h2 className='pageHeaders'>Discography</h2>
               <Discography tracks={ this.state.OakTreeSpecial } />
               <Spotify />
+              <a href="http://localhost:8080">
+                <button>Login with Spotify</button>
+              </a>
+              <div>Now Playing: { this.state.nowPlaying.name }</div>
+              <div>
+                <img src={ this.state.nowPlaying.image } style={{ width: 100 }}/>
+              </div>
+              <button onClick={() => this.getNowPlaying()}>
+                Check Now Playing
+              </button>
             </React.Fragment>
           )}/>
           <Route exact path="/shop" />
