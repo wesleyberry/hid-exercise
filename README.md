@@ -35,6 +35,7 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 CLIENTSECRET=YOUR_CLIENT_SECRET
 
 NODE_ENV=development`
+
 7. Navigate into the client directory 
 `cd client`
 8. Install dependencies for React server
