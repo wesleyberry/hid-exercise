@@ -29,10 +29,14 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 `touch .env`
 5. Retrieve a client id and secret for Spotify. Find out how to do this [here](https://developer.spotify.com/documentation/web-api/quick-start/).
 6. Add these credentials to your .env like such:
+
 `
 CLIENTID=YOUR_CLIENT_ID
+
 CLIENTSECRET=YOUR_CLIENT_SECRET
+
 NODE_ENV=development
+
 `
 7. Navigate into the client directory 
 `cd client`
