@@ -62,7 +62,7 @@ class Spotify extends Component {
               </div>
               <div className="row" >
                 <p>First, login with Spotify:</p>
-                <a href="http://localhost:8080">
+                <a href={ window.location.hostname == "localhost" ? "http://localhost:8080/" :  'https://pure-brook-92293.herokuapp.com/callback'}>
                   <button className="btn inlineButton">Login with Spotify</button>
                 </a>
               </div>
