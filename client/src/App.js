@@ -17,6 +17,7 @@ import Hoodie from './Images/sw_hoodie_2_cropped.png';
 import Album from './Images/oak_tree_special.png';
 import Merch from './components/Merch/Merch';
 import SingleMerch from './components/SingleMerch/SingleMerch';
+import Cart from './components/Cart/Cart';
 
 
 class App extends Component {
@@ -191,7 +192,36 @@ class App extends Component {
         image: Album
       },
     ],
-    currentItem: {}
+    cartItems: [
+      {
+
+      }
+    ]
+  }
+
+  constructor(props) {
+    super(props)
+
+    this.handler = this.handler.bind(this);
+  }
+
+  handler(event) {
+    let newId = event.target.id;
+    let addItem = {};
+    for(let i = 0; i < this.state.merchItems.length; i++ ) {
+      if (this.state.merchItems[i].id === newId) {
+        addItem = this.state.merchItems[i];
+      }
+    }
+    if(this.state.cartItems.length === 0) {
+      this.setState({
+        cartItems: addItem
+      })
+    } else {
+      this.setState({
+        cartItems: [...this.state.cartItems, addItem]
+      });
+    }
   }
 
   render() {
@@ -248,7 +278,15 @@ class App extends Component {
           <SingleMerch 
             {...props} 
             items={ this.state.merchItems }
+            action={ this.handler }
           />)}/>
+          <Route exact path="/cart" render={ props => (
+            <React.Fragment>
+              <Cart 
+                items={ this.state.cartItems }
+              />
+            </React.Fragment>
+          )}/>
         </Switch>
       </Router>
     );

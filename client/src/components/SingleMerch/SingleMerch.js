@@ -1,5 +1,6 @@
 import React from 'react';
 import './SingleMerch.css';
+import { NavLink } from 'react-router-dom';
 
 export default function SingleMerch(props) {
     let url_id = props.match.params.id;
@@ -17,7 +18,8 @@ export default function SingleMerch(props) {
                                 <div className="col-xs-12 col-md-6 col2">
                                     <h1 className="smTitle">{ item.title }</h1>
                                     <h2 className="smPrice">{ item.price }</h2>
-                                    <button className="btn inlineButton">Add to Cart</button>
+                                    <button onClick={ props.action} className="btn inlineButton" id={ item.id }>Add to Cart</button>
+                                    <NavLink className="btn goToCart" to={ '/cart' } >Go To Cart</NavLink>
                                 </div>
                             </div>
                         </div>

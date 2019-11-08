@@ -17,6 +17,19 @@
     .col2 {
         padding-top: 50px;
     }
+    .goToCart {
+        background-color: #2e1504;
+        color: rgb(241, 241, 241);
+        transition: 0.4s;
+        margin-left: 25px;
+        padding-left: 17px;
+        padding-right: 17px;
+    }
+    .goToCart:hover {
+        background-color: #803a0c;
+        color: rgb(241, 241, 241);
+        transition: 0.4s;
+    }
 }
 @media (min-width: 576px) { 
     .smImage {
