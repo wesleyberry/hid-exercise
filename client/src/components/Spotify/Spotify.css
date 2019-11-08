@@ -9,4 +9,34 @@
         text-align: center;
         margin: 25px 0 25px 0;
     }
+    .SpotifyContainer {
+        background-color: #2e1504;
+        padding: 50px 0 50px 0;
+    }
+    .SpotifyHeader {
+        color: rgb(43, 165, 38);
+        text-align: center;
+    }
+    .SpotifySubContainer .row p {
+        color: rgb(207, 207, 207);
+    }
+    .SpotifySubContainer .row {
+        margin-bottom: 25px;
+    }
+    .SpotifySubContainer .row ul li a {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: rgb(207, 207, 207);
+    }
+    .SpotifySubContainer .row ul {
+        list-style: none;
+    }
+    .SpotifySubContainer .row ul li::before {
+        content: "\2022";
+        color: rgb(43, 165, 38);
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em; 
+        margin-left: -1em; 
+    }
 }

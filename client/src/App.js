@@ -11,14 +11,12 @@ import SignUp from './components/SignUp/SignUp';
 import Discography from './components/Discography/Discography';
 import TourArchive from './components/TourArchive/TourArchive';
 import Spotify from './components/Spotify/Spotify';
-import SpotifyAPI from 'spotify-web-api-js';
 import TShirt from './Images/sq_shirt_1.png';
 import Cap from './Images/sw_hat_1.png';
 import Hoodie from './Images/sw_hoodie_2_cropped.png';
 import Album from './Images/oak_tree_special.png';
 import Merch from './components/Merch/Merch';
 
-const spotifyWebApi = new SpotifyAPI();
 
 class App extends Component {
   state = {
@@ -166,7 +164,6 @@ class App extends Component {
       }
     ],
     loggedIn: true,
-    nowPlaying: {},
     merchItems: [
       {
         id: uuid.v4(),
@@ -192,50 +189,7 @@ class App extends Component {
         price: '$19.99',
         image: Album
       },
-    ],
-    searchedTracks: [],
-    APIImage: ''
-  }
-  constructor() {
-    super();
-    const params = this.getHashParams();
-    this.setState({
-      loggedIn: params.access_token ? true : false,
-      nowPlaying: {
-        name: 'Not Checked',
-        image: ''
-      }
-    });
-    if(params.access_token) {
-      spotifyWebApi.setAccessToken(params.access_token);
-    }
-  }
-
-  getHashParams() {
-    var hashParams = {};
-    var e, r = /([^&;=]+)=?([^&;]*)/g,
-        q = window.location.hash.substring(1);
-    while ( e = r.exec(q)) {
-       hashParams[e[1]] = decodeURIComponent(e[2]);
-    }
-    return hashParams;
-  }
-
-  searchAPI() {
-    spotifyWebApi.searchTracks('artist:Punch Brothers').then(
-      data => {
-        let searchedTracks = [];
-        for( let i = 0; i < 5; i++) {
-          searchedTracks.push({ name: data.tracks.items[i].name, preview_url: data.tracks.items[0].preview_url });
-        }
-        let APIImage = data.tracks.items[0].album.images[0].url;
-        this.setState({
-          searchedTracks,
-          APIImage
-        });
-      },
-      err => console.log('Something went wrong!', err)
-    );
+    ]
   }
 
   render() {
@@ -261,48 +215,6 @@ class App extends Component {
               <h2 className='pageHeaders'>Discography</h2>
               <Discography tracks={ this.state.OakTreeSpecial } />
               <Spotify />
-              <div className="container-fluid SpotifyContainer">
-                <div className="container SpotifySubContainer">
-                  <h2 className="SpotifyHeader">Comin' to Spotify Soon!</h2>
-                  <div className="row">
-                    <p>In the mean time, check out this band. Punch Brothers has been an inspiration to us and our music.</p>
-                  </div>
-                  <div className="row" >
-                    <p>First, login with Spotify:</p>
-                    <a href="http://localhost:8080">
-                      <button className="btn inlineButton">Login with Spotify</button>
-                    </a>
-                  </div>
-                  <div className="row" >
-                    <p>Second, check Spotify:</p>
-                    <button onClick={() => this.searchAPI()} className="btn inlineButton">
-                      Search API
-                    </button>
-                  </div>
-                  <div className="row" >
-                    <p>Our Recommendation:  <strong>Punch Brothers</strong></p>
-                  </div>
-                  <div className="row" >
-                    <div className="col-xs-12 col-md-6">
-                      <img src={ this.state.APIImage } style={{ width: '280px', marginBottom: '25px' }}/>
-                    </div>
-                    <div className="col-xs-12 col-md-6">
-                    { this.state.searchedTracks.length > 1 ? <p>Click any of these song names for a preview</p> : ''}
-                    <ul>
-                      { this.state.searchedTracks.map(track => (
-                        <React.Fragment>
-                          <li>
-                            <a href={ track.preview_url } rel='noopener' target="_target">
-                              {track.name}
-                            </a>
-                          </li>
-                        </React.Fragment>
-                      )) }
-                    </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </React.Fragment>
           )}/>
           <Route exact path="/shop" render={ props=> (
