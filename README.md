@@ -7,7 +7,7 @@ The website has the front-end for a store. Users can view merchandise and add th
 ### Users can find the deployed application [here](https://pure-brook-92293.herokuapp.com/).
 #### PLEASE NOTE THAT THE SPOTIFY FUNCTIONALITY IS NOT SETUP ON THE DEPLOYED APP.
 - - -
-Technologies used:
+## Technologies used:
 * React.js
 * Node.js and Express.js
 * spotify-web-api-node
@@ -16,7 +16,7 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 * [package.json for express](/package.json)
 * [package.json for React](/client/package.json)
 - - -
-#### How to set up the application on your machine
+## How to set up the application on your machine
 1. Clone the repository to your machine.
 `git clone https://github.com/wesleyberry/hid-exercise.git`
 2. Navigate into the root directory
@@ -40,5 +40,6 @@ NODE_ENV=development
 `cd ..`
 10. Start the app, and it will open on localhost:3000
 `npm run dev`
+- - -
 ## Where Users can get help with this application:
 * Wesley Berry: wesleyberry52@gmail.com
