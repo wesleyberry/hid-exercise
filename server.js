@@ -113,7 +113,7 @@ app.get('/callback', function(req, res) {
 
         // we can also pass the token to the browser to make requests from there
         if( process.env.NODE_ENV === 'production') {
-          res.redirect('https://pure-brook-92293.heroku.a/music/#' +
+          res.redirect('https://pure-brook-92293.herokuapp.com/music/#' +
             querystring.stringify({
               access_token: access_token,
               refresh_token: refresh_token
