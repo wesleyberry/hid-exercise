@@ -12,9 +12,11 @@ The website has the front-end for a store. Users can view merchandise and add th
 * Node.js and Express.js
 * spotify-web-api-node
 * spotify-web-api-js
+
 Please see either of the package.jsons to see a detailed list of dependencies:
 * [package.json for express](/package.json)
 * [package.json for React](/client/package.json)
+
 - - -
 ## How to set up the application on your machine
 1. Clone the repository to your machine.
@@ -40,6 +42,8 @@ NODE_ENV=development
 `cd ..`
 10. Start the app, and it will open on localhost:3000
 `npm run dev`
+
 - - -
 ## Where Users can get help with this application:
 * Wesley Berry: wesleyberry52@gmail.com
+
