@@ -16,6 +16,7 @@ import Cap from './Images/sw_hat_1.png';
 import Hoodie from './Images/sw_hoodie_2_cropped.png';
 import Album from './Images/oak_tree_special.png';
 import Merch from './components/Merch/Merch';
+import SingleMerch from './components/SingleMerch/SingleMerch';
 
 
 class App extends Component {
@@ -189,7 +190,8 @@ class App extends Component {
         price: '$19.99',
         image: Album
       },
-    ]
+    ],
+    currentItem: {}
   }
 
   render() {
@@ -242,6 +244,11 @@ class App extends Component {
               <TourArchive tours={ this.state.TourTwo } />
             </React.Fragment>
           )}/>
+          <Route exact path="/shop/:id" render={ props => (
+          <SingleMerch 
+            {...props} 
+            items={ this.state.merchItems }
+          />)}/>
         </Switch>
       </Router>
     );

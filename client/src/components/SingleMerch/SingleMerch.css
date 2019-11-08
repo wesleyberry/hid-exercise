@@ -1,0 +1,40 @@
+@media (min-width: 300px) { 
+    .smImage {
+        height: 200px;
+        width: auto;
+    }
+    .smTitle {
+        font-size: 45px;
+        margin-bottom: 25px;
+    }
+    .smPrice {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+    .col1 {
+        text-align: center;
+    }
+    .col2 {
+        padding-top: 50px;
+    }
+}
+@media (min-width: 576px) { 
+    .smImage {
+        height: 250px;
+    }
+}
+@media (min-width: 768px) { 
+    .smImage {
+        height: 300px;
+    }
+}
+@media (min-width: 992px) { 
+    .smImage {
+        height: 400px;
+    }
+}
+@media (min-width: 1200px) { 
+    .smImage {
+        height: 450px;
+    }
+}

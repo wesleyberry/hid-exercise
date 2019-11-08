@@ -1,45 +1,66 @@
-.outerBox {
-    margin-bottom: 100px;
+@media (min-width: 300px) { 
+    .outerBox {
+        margin-bottom: 100px;
+    }
+    .box {
+        width: 280px;
+        height: 280px;
+        background: rgb(0, 0, 0, 0);
+        box-sizing: border-box;
+        margin: auto;
+    }
+    .imgBox {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .imgBox > img {
+        max-width: 100%;
+        transition: transform 1s;
+    }
+    .box:hover .imgBox img {
+        transform: scale(1.2);
+    }
+    .box .details {
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 5%;
+        left: 28%;
+        background: rgba(0, 0, 0, 0.8);
+        transform: scaleY(0);
+        overflow: hidden;
+        transition: transform .4s;
+        cursor: pointer;
+    }
+    .box:hover .details {
+        transform: scaleY(1);
+    }
+    .box .details .content {
+        position: absolute;
+        top: 50%;
+        transform: translate(27%, -50%);
+        text-align: center;
+        color: #fff;
+        padding: 15px;
+    }
+    .buttonCont {
+        background-color: rgba(0, 0, 0, 0.0);
+        border: none;
+    }
 }
-.box {
-    width: 280px;
-    height: 280px;
-    background: rgb(0, 0, 0, 0);
-    box-sizing: border-box;
-    margin: auto;
+@media (min-width: 768px) { 
+    .box .details {
+        left: 15%;
+    }
 }
-.imgBox {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
+@media (min-width: 992px) { 
+    .box .details {
+        left: 24%;
+    }
 }
-.imgBox > img {
-    max-width: 100%;
-    transition: transform 1s;
-}
-.box:hover .imgBox img {
-    transform: scale(1.2);
-}
-.box .details {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    top: 5%;
-    left: 28%;
-    background: rgba(0, 0, 0, 0.8);
-    transform: scaleY(0);
-    overflow: hidden;
-    transition: transform .4s;
-    cursor: pointer;
-}
-.box:hover .details {
-    transform: scaleY(1);
-}
-.box .details .content {
-    position: absolute;
-    top: 50%;
-    transform: translate(27%, -50%);
-    text-align: center;
-    color: #fff;
-    padding: 15px;
+@media (min-width: 1200px) { 
+    .box .details {
+        left: 28%;
+    }
 }

@@ -20,7 +20,7 @@
         transition: 0.4s;
     }
     .nav-link:hover {
-        color: black !important;
+        color: rgb(43, 165, 38) !important;
         transition: 0.4s;
     }
     .socialContainer {
@@ -56,6 +56,9 @@
     .fa-spotify:hover {
         color: #1DB954;
         transition: 0.4s;
+    }
+    .active {
+        color: black !important;
     }
 }
 

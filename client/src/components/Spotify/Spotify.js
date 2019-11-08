@@ -80,7 +80,7 @@ class Spotify extends Component {
                   <img src={ this.state.APIImage } style={{ width: '280px', marginBottom: '25px' }}/>
                 </div>
                 <div className="col-xs-12 col-md-6">
-                { this.state.searchedTracks.length > 1 ? <p>Click any of these song names for a preview</p> : ''}
+                { this.state.searchedTracks.length > 1 ? <p>Click any of these song names for a preview (will open a new tab in the browser) </p> : ''}
                 <ul>
                   { this.state.searchedTracks.map(track => (
                     <React.Fragment>

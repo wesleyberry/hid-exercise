@@ -16,16 +16,16 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/" }>Home</NavLink>
+                        <NavLink className="nav-link" to={ "/" } exact activeClassName={'active'}>Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/music" }>Music</NavLink>
+                        <NavLink className="nav-link" to={ "/music" } exact activeClassName={'active'}>Music</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/shop" }>Shop</NavLink>
+                        <NavLink className="nav-link" to={ "/shop" } exact activeClassName={'active'}>Shop</NavLink>
                     </li>
                     <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/tour" }>Tour</NavLink>
+                        <NavLink className="nav-link" to={ "/tour" } exact activeClassName={'active'}>Tour</NavLink>
                     </li>
                     </ul>
                 </div>
