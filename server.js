@@ -21,7 +21,11 @@ var cookieParser = require('cookie-parser');
 
 var client_id = process.env.CLIENTID; // Your client id
 var client_secret = process.env.CLIENTSECRET; // Your secret
-var redirect_uri = 'http://localhost:8080/callback'; // Your redirect uri
+if(process.env.NODE_ENV === 'production') {
+  var redirect_uri = 'https://pure-brook-92293.herokuapp.com/callback';
+} else {
+  var redirect_uri = 'http://localhost:8080/callback'; // Your redirect uri
+}
 
 /**
  * Generates a random string containing numbers and letters
@@ -108,11 +112,19 @@ app.get('/callback', function(req, res) {
         });
 
         // we can also pass the token to the browser to make requests from there
-        res.redirect('http://localhost:3000/music/#' +
+        if( process.env.NODE_ENV === 'production') {
+          res.redirect('https://pure-brook-92293.heroku.a/music/#' +
+            querystring.stringify({
+              access_token: access_token,
+              refresh_token: refresh_token
+          }));
+        } else {
+          res.redirect('https://pure-brook-92293.herokuapp.com/music/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
           }));
+        }
       } else {
         res.redirect('/#' +
           querystring.stringify({
