@@ -15,18 +15,21 @@ export default function Navbar() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/" } exact activeClassName={'active'}>Home</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/music" } exact activeClassName={'active'}>Music</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/shop" } exact activeClassName={'active'}>Shop</NavLink>
-                    </li>
-                    <li className="nav-item">
-                        <NavLink className="nav-link" to={ "/tour" } exact activeClassName={'active'}>Tour</NavLink>
-                    </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={ "/" } exact activeClassName={'active'}>Home</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={ "/music" } exact activeClassName={'active'}>Music</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={ "/shop" } exact activeClassName={'active'}>Shop</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={ "/tour" } exact activeClassName={'active'}>Tour</NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to={ "/cart" } exact activeClassName={'active'}> Cart</NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>
