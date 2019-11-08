@@ -119,7 +119,7 @@ app.get('/callback', function(req, res) {
               refresh_token: refresh_token
           }));
         } else {
-          res.redirect('https://pure-brook-92293.herokuapp.com/music/#' +
+          res.redirect('http://localhost:3000/music/#' +
           querystring.stringify({
             access_token: access_token,
             refresh_token: refresh_token
