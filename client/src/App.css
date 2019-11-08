@@ -73,13 +73,45 @@ pre {
   color: #2e1504;
 }
 .inlineButton {
-  background-color: rgb(134, 72, 31);
-  color: #eeeeee;
+  background-color: rgb(36, 124, 33);
+  color: rgb(241, 241, 241);
   transition: 0.4s;
   margin-left: 25px;
+  padding-left: 17px;
+  padding-right: 17px;
 }
 .inlineButton:hover {
-  background-color: rgb(168, 83, 26);
+  background-color: rgb(43, 165, 38);
   color: rgb(238, 238, 238);
   transition: 0.4s;
+}
+.SpotifyContainer {
+  background-color: #2e1504;
+  padding: 50px 0 50px 0;
+}
+.SpotifyHeader {
+  color: rgb(43, 165, 38);
+  text-align: center;
+}
+.SpotifySubContainer .row p {
+  color: rgb(207, 207, 207);
+}
+.SpotifySubContainer .row {
+  margin-bottom: 25px;
+}
+.SpotifySubContainer .row ul li a {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: rgb(207, 207, 207);
+}
+.SpotifySubContainer .row ul {
+  list-style: none;
+}
+.SpotifySubContainer .row ul li::before {
+  content: "\2022";
+  color: rgb(43, 165, 38);
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em; 
+  margin-left: -1em; 
 }

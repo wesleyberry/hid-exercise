@@ -23,9 +23,6 @@
         color: black !important;
         transition: 0.4s;
     }
-    .active {
-        color: rgb(32, 32, 32) !important;
-    }
     .socialContainer {
         text-align: center;
         margin: 75px 0 75px 0;

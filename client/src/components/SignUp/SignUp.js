@@ -6,7 +6,7 @@ function SignUp() {
         <div className="container-fluid signUpWrapper">
             <div className="container signUpContainer">
                 <h2 className="subHeaderSignUp">Sign Up for Updates on Releases and Tour Dates</h2>
-                <p style={ {color:'#eeeeee'} }>Or don't. Don't feel pressured. 
+                <p style={ {color: 'rgb(207, 207, 207)'} }>Or don't. Don't feel pressured. 
                     We're just a friendly, local bluegrass band who sends video jam-seshs and releases straight to your inbox. 
                     Nah, that doesn't sound worth it. 
                     Or does it? 

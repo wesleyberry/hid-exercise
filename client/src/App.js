@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import uuid from 'uuid';
 import Navbar from './components/Navbar/Navbar';
 import Video from './components/Video/Video';
 import Table from './components/Table/Table';
@@ -23,36 +24,36 @@ class App extends Component {
   state = {
     videos: [
       {
-        id: 1,
+        id: uuid.v4(),
         src: 'https://www.youtube.com/embed/u1iiGNgznu0',
         title: 'song1'
       },
       {
-        id: 2,
+        id: uuid.v4(),
         src: 'https://www.youtube.com/embed/XOZedVhHP-o',
         title: 'song2'
       },
       {
-        id: 3,
+        id: uuid.v4(),
         src: 'https://www.youtube.com/embed/7iqf5ytps5c',
         title: 'song2'
       },
     ],
     upcomingTours: [
       {
-        id: 4,
+        id: uuid.v4(),
         date: 'November 20, 2019',
         name: 'Squeek Squeek Celebration',
         location: 'Squirrel City, AL'
       },
       {
-        id: 5,
+        id: uuid.v4(),
         date: 'November 23, 2019',
         name: 'Nut, Nut, Acorn',
         location: 'Almond, North Carolina'
       },
       {
-        id: 6,
+        id: uuid.v4(),
         date: 'November 25, 2019',
         name: 'Berry Bananza',
         location: 'Cashew City, Bermuda'
@@ -60,106 +61,106 @@ class App extends Component {
     ],
     OakTreeSpecial: [
       {
-        id: 7,
+        id: uuid.v4(),
         title: 'Up The Oak Tree',
         time: '3:00'
       },
       {
-        id: 8,
+        id: uuid.v4(),
         title: 'Sweet Home Hickory',
         time: '2:50'
       },
       {
-        id: 9,
+        id: uuid.v4(),
         title: 'Fox on the Chase',
         time: '7:05'
       },
       {
-        id: 10,
+        id: uuid.v4(),
         title: 'Can\'t you hear me Diggin',
         time: '4:12'
       },
       {
-        id: 11,
+        id: uuid.v4(),
         title: 'Midnight Owl',
         time: '3:43'
       },
       {
-        id: 12,
+        id: uuid.v4(),
         title: 'Your Love is Like a Nut',
         time: '4:00'
       }
     ],
     TourOne: [
       {
-        id: 13,
+        id: uuid.v4(),
         location: 'Houston',
         date: 'June 10, 2018'
       },
       {
-        id: 14,
+        id: uuid.v4(),
         location: 'Dallas',
         date: 'June 13, 2018'
       },
       {
-        id: 15,
+        id: uuid.v4(),
         location: 'Austin',
         date: 'June 14, 2018'
       },
       {
-        id: 16,
+        id: uuid.v4(),
         location: 'San Antonio',
         date: 'June 17, 2018'
       },
       {
-        id: 17,
+        id: uuid.v4(),
         location: 'El Paso',
         date: 'June 23, 2018'
       },
       {
-        id: 18,
+        id: uuid.v4(),
         location: 'Fort Worth',
         date: 'June 28, 2018'
       },
       {
-        id: 19,
+        id: uuid.v4(),
         location: 'Arlington',
         date: 'June 30, 2018'
       }
     ],
     TourTwo: [
       {
-        id: 20,
+        id: uuid.v4(),
         location: 'Austin',
         date: 'June 1, 2019'
       },
       {
-        id: 21,
+        id: uuid.v4(),
         location: 'Odessa',
         date: 'June 5, 2019'
       },
       {
-        id: 22,
+        id: uuid.v4(),
         location: 'Waco',
         date: 'June 6, 2019'
       },
       {
-        id: 23,
+        id: uuid.v4(),
         location: 'Lubbock',
         date: 'June 10, 2019'
       },
       {
-        id: 24,
+        id: uuid.v4(),
         location: 'Corpus Chrisi',
         date: 'June 12, 2019'
       },
       {
-        id: 25,
+        id: uuid.v4(),
         location: 'Galveston',
         date: 'June 15, 2019'
       },
       {
-        id: 26,
+        id: uuid.v4(),
         location: 'Houston',
         date: 'June 19, 2019'
       }
@@ -168,25 +169,25 @@ class App extends Component {
     nowPlaying: {},
     merchItems: [
       {
-        id:27,
+        id: uuid.v4(),
         title: 'T-Shirt',
         price: '$19.99',
         image: TShirt
       },
       {
-        id:28,
+        id: uuid.v4(),
         title: 'Ball Cap',
         price: '$9.99',
         image: Cap
       },
       {
-        id:29,
+        id: uuid.v4(),
         title: 'Hoodie',
         price: '$29.99',
         image: Hoodie
       },
       {
-        id: 30,
+        id:  uuid.v4(),
         title: 'Album',
         price: '$19.99',
         image: Album
@@ -220,27 +221,14 @@ class App extends Component {
     return hashParams;
   }
 
-  getNowPlaying() {
-    spotifyWebApi.getMyCurrentPlaybackState()
-      .then(response => {
-        this.setState({
-          nowPlaying: {
-            name: response.item.name,
-            image: response.item.album.images[0].url
-          }
-        })
-      })
-  }
-
   searchAPI() {
     spotifyWebApi.searchTracks('artist:Punch Brothers').then(
       data => {
         let searchedTracks = [];
         for( let i = 0; i < 5; i++) {
-          searchedTracks.push(data.tracks.items[i].name);
+          searchedTracks.push({ name: data.tracks.items[i].name, preview_url: data.tracks.items[0].preview_url });
         }
         let APIImage = data.tracks.items[0].album.images[0].url;
-        console.log(APIImage);
         this.setState({
           searchedTracks,
           APIImage
@@ -273,35 +261,46 @@ class App extends Component {
               <h2 className='pageHeaders'>Discography</h2>
               <Discography tracks={ this.state.OakTreeSpecial } />
               <Spotify />
-              <div className="container">
-                <h2 style={{ textAlign: 'center'}}>Comin' to Spotify Soon! In the mean time, Check Out Our Recommendation...</h2>
-                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
-                  <p>First, login with Spotify:</p>
-                  <a href="http://localhost:8080">
-                    <button className="btn inlineButton">Login with Spotify</button>
-                  </a>
-                </div>
-                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
-                  <p>Third, check your spotify:</p>
-                  {/* <button onClick={() => this.getNowPlaying()} className="btn inlineButton">
-                    Check Now Playing
-                  </button> */}
-                  <button onClick={() => this.searchAPI()} className="btn inlineButton">
-                    Search API
-                  </button>
-                </div>
-                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
-                  <p>Our Recommendation:  <strong>Punch Brothers</strong></p>
-                </div>
-                <div className="row" style={{ display:'flex', marginBottom: '25px' }}>
-                  <img src={ this.state.APIImage } style={{ width: '280px' }}/>
-                </div>
-                <div className="row">
-                  <ul>
-                    { this.state.searchedTracks.map(track => (
-                      <li style={{ fontSize:'20px', marginBottom:'20px' }}>{ track }</li>
-                    )) }
-                  </ul>
+              <div className="container-fluid SpotifyContainer">
+                <div className="container SpotifySubContainer">
+                  <h2 className="SpotifyHeader">Comin' to Spotify Soon!</h2>
+                  <div className="row">
+                    <p>In the mean time, check out this band. Punch Brothers has been an inspiration to us and our music.</p>
+                  </div>
+                  <div className="row" >
+                    <p>First, login with Spotify:</p>
+                    <a href="http://localhost:8080">
+                      <button className="btn inlineButton">Login with Spotify</button>
+                    </a>
+                  </div>
+                  <div className="row" >
+                    <p>Second, check Spotify:</p>
+                    <button onClick={() => this.searchAPI()} className="btn inlineButton">
+                      Search API
+                    </button>
+                  </div>
+                  <div className="row" >
+                    <p>Our Recommendation:  <strong>Punch Brothers</strong></p>
+                  </div>
+                  <div className="row" >
+                    <div className="col-xs-12 col-md-6">
+                      <img src={ this.state.APIImage } style={{ width: '280px', marginBottom: '25px' }}/>
+                    </div>
+                    <div className="col-xs-12 col-md-6">
+                    { this.state.searchedTracks.length > 1 ? <p>Click any of these song names for a preview</p> : ''}
+                    <ul>
+                      { this.state.searchedTracks.map(track => (
+                        <React.Fragment>
+                          <li>
+                            <a href={ track.preview_url } rel='noopener' target="_target">
+                              {track.name}
+                            </a>
+                          </li>
+                        </React.Fragment>
+                      )) }
+                    </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </React.Fragment>

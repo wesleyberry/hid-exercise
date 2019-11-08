@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import imageHeader from '../../Images/Squirrel_Whisperers.png';
 
@@ -16,16 +16,16 @@ export default function Navbar() {
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav">
                     <li className="nav-item">
-                        <Link className="nav-link" to="/">Home</Link>
+                        <NavLink className="nav-link" to={ "/" }>Home</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="music">Music</Link>
+                        <NavLink className="nav-link" to={ "/music" }>Music</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="shop">Shop</Link>
+                        <NavLink className="nav-link" to={ "/shop" }>Shop</NavLink>
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link" to="tour">Tour</Link>
+                        <NavLink className="nav-link" to={ "/tour" }>Tour</NavLink>
                     </li>
                     </ul>
                 </div>

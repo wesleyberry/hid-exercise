@@ -16,18 +16,23 @@
     margin-top: 25px;
 }
 .signUpButton {
-    background-color: rgb(43, 165, 38);
+    background-color: rgb(36, 124, 33);
     color: rgb(241, 241, 241);
     transition: 0.4s;
     margin-top: 25px;
+    padding-left: 17px;
+    padding-right: 17px;
 }
 .signUpButton:hover {
-    background-color: rgb(36, 124, 33);
+    background-color: rgb(43, 165, 38);
     color: rgb(238, 238, 238);
     transition: 0.4s;
 }
 #emailInput {
     margin-top: 50px;
+}
+.form-control {
+    border-radius: .10rem;
 }
 @media (min-width: 300px) { 
     #emailInput {
