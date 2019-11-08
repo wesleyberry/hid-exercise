@@ -4,6 +4,10 @@
 .cartCont {
     text-align: center;
 }
+#root > div.container.cartCont > h2:nth-child(5) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 @media (min-width: 300px) {
     .cartImage {
         height: 200px;

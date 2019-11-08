@@ -22,10 +22,10 @@ export default function Navbar() {
                             <NavLink className="nav-link" to={ "/music" } exact activeClassName={'active'}>Music</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to={ "/shop" } exact activeClassName={'active'}>Shop</NavLink>
+                            <NavLink className="nav-link" to={ "/tour" } exact activeClassName={'active'}>Tour</NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to={ "/tour" } exact activeClassName={'active'}>Tour</NavLink>
+                            <NavLink className="nav-link" to={ "/shop" } exact activeClassName={'active'}>Shop</NavLink>
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to={ "/cart" } exact activeClassName={'active'}> Cart</NavLink>

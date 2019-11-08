@@ -9,7 +9,7 @@ export default function SingleMerch(props) {
         <React.Fragment>
             { items.map(item => (
                 item.id === url_id ? 
-                    <div className="container-fluid">
+                    <div className="container-fluid smOuterCont">
                         <div className="container">
                             <div className="row justify-content-center">
                                 <div className="col-xs-12 col-md-6 col1">

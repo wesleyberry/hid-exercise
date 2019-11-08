@@ -30,6 +30,9 @@
         color: rgb(241, 241, 241);
         transition: 0.4s;
     }
+    .smOuterCont {
+        margin-bottom: 150px;
+    }
 }
 @media (min-width: 576px) { 
     .smImage {
