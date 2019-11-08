@@ -16,5 +16,9 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 * [package.json for express](/package.json)
 * [package.json for React](/client/package.json)
 - - -
+#### How to set up the application on your machine
+1. Clone the repository to your machine.
+
+
 ## Where Users can get help with this application:
 * Wesley Berry: wesleyberry52@gmail.com
