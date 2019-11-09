@@ -23,11 +23,11 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 `git clone https://github.com/wesleyberry/hid-exercise.git`
 2. Navigate into the root directory
 `cd hid-exercise`
-3. Install dependencies for Express server
+3. Install dependencies
 `npm install`
 4. Create .env file
 `touch .env`
-5. Retrieve a client id and secret for Spotify. Find out how to do this [here](https://developer.spotify.com/documentation/web-api/quick-start/).
+5. Retrieve a client id and secret for Spotify. Find out how to do so [here](https://developer.spotify.com/documentation/web-api/quick-start/).
 6. Add these credentials to your .env like such:
 
 `CLIENTID=YOUR_CLIENT_ID
@@ -36,13 +36,7 @@ CLIENTSECRET=YOUR_CLIENT_SECRET
 
 NODE_ENV=development`
 
-7. Navigate into the client directory 
-`cd client`
-8. Install dependencies for React server
-`npm install`
-9. Navigate to root directory
-`cd ..`
-10. Start the app, and it will open on localhost:3000
+7. Start the app, and it will open on localhost:3000 and localhost:8080
 `npm run dev`
 
 - - -
