@@ -7,7 +7,7 @@ The website has the front-end for a store. Users can view merchandise and add th
 ### Users can find the deployed application [here](https://pure-brook-92293.herokuapp.com/).
 #### PLEASE NOTE THAT THE SPOTIFY FUNCTIONALITY IS NOT SETUP ON THE DEPLOYED APP.
 - - -
-## Technologies used:
+## Technologies used
 * React.js - JavaScript library and web framework
 * Node.js and Express.js - JavaScript runtime environment and web application framework respectively
 * spotify-web-api-node - Wrapper/client for Spotify Web API that runs on Node.js
@@ -42,6 +42,6 @@ NODE_ENV=development`
 `npm run dev`
 
 - - -
-## Where Users can get help with this application:
+## Where Users can get help with this application
 * Wesley Berry: wesleyberry52@gmail.com
 
