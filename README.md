@@ -8,10 +8,12 @@ The website has the front-end for a store. Users can view merchandise and add th
 #### PLEASE NOTE THAT THE SPOTIFY FUNCTIONALITY IS NOT SETUP ON THE DEPLOYED APP.
 - - -
 ## Technologies used:
-* React.js
-* Node.js and Express.js
-* spotify-web-api-node
-* spotify-web-api-js
+* React.js - JavaScript library and web framework
+* Node.js and Express.js - JavaScript runtime environment and web application framework respectively
+* spotify-web-api-node - Wrapper/client for Spotify Web API that runs on Node.js
+* spotify-web-api-js - Wrapper that includes functions for Spotify's endpoints
+* GIMP - graphics editor
+* Canva - graphic design software
 
 Please see either of the package.jsons to see a detailed list of dependencies:
 * [package.json for express](/package.json)
