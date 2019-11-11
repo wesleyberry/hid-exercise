@@ -21,13 +21,13 @@ Please see either of the package.jsons to see a detailed list of dependencies:
 - - -
 ## Screenshots of the application
 ### Pages on large screen
-![Landing Page Desktop View](/screenshots/finalLanding.png)
-![Discography Page Desktop View](/screenshots/finalLanding.png)
-![Tour Page Desktop View](/screenshots/finalLanding.png)
-![Merchandise Page Desktop View](/screenshots/finalLanding.png)
-![Cart Page Desktop View](/screenshots/finalLanding.png)
-![Discography Page Mobile View](/screenshots/finalLanding.png)
-![Cart Page Mobile View](/screenshots/finalLanding.png)
+![Landing Page Desktop View](/screenshots/screenshot_1.JPG)
+![Discography Page Desktop View](/screenshots/screenshot_2.JPG)
+![Tour Page Desktop View](/screenshots/screenshot_3.JPG)
+![Merchandise Page Desktop View](/screenshots/screenshot_4.JPG)
+![Cart Page Desktop View](/screenshots/screenshot_5.JPG)
+![Discography Page Mobile View](/screenshots/screenshot_6.JPG)
+![Cart Page Mobile View](/screenshots/screenshot_7.JPG)
 
 - - -
 ## How to set up the application on your machine
