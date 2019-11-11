@@ -18,6 +18,16 @@ The website has the front-end for a store. Users can view merchandise and add th
 Please see either of the package.jsons to see a detailed list of dependencies:
 * [package.json for express](/package.json)
 * [package.json for React](/client/package.json)
+- - -
+## Screenshots of the application
+### Pages on large screen
+![Landing Page Desktop View](/screenshots/finalLanding.png)
+![Discography Page Desktop View](/screenshots/finalLanding.png)
+![Tour Page Desktop View](/screenshots/finalLanding.png)
+![Merchandise Page Desktop View](/screenshots/finalLanding.png)
+![Cart Page Desktop View](/screenshots/finalLanding.png)
+![Discography Page Mobile View](/screenshots/finalLanding.png)
+![Cart Page Mobile View](/screenshots/finalLanding.png)
 
 - - -
 ## How to set up the application on your machine
