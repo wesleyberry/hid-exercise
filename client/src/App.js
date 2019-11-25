@@ -246,7 +246,7 @@ class App extends Component {
             <React.Fragment>
               <h2 className='pageHeaders'>Discography</h2>
               <Discography tracks={ this.state.OakTreeSpecial } />
-              <Spotify />
+              {/* <Spotify /> */}
             </React.Fragment>
           )}/>
           <Route exact path="/shop" render={ props=> (
